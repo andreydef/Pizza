@@ -2,8 +2,9 @@ import React from 'react';
 
 function Categories({ items, onClickItem }) {
 
-    const [activeItem, setActiveItem] = React.useState(null);
+    const [activeItem, setActiveItem] = React.useState(null); // event of active items
 
+    // select item of categories
     const onSelectItem = (index) => {
         setActiveItem(index);
     }
@@ -12,19 +13,21 @@ function Categories({ items, onClickItem }) {
         <div>
             <div className="categories">
                 <ul>
-                    <li 
+                    <li
                         className={activeItem === null ? 'active' : ''}
                         onClick={() => onSelectItem(null)}>Все
                     </li>
-                    { items && 
+                    {items &&
                         items.map((name, index) => (
-                            <li 
+                            <li
+                                // change class active to clicked item 
                                 className={activeItem === index ? 'active' : ''}
-                                onClick={() => onSelectItem(index)} 
+                                onClick={() => onSelectItem(index)}
                                 key={`${name}_${index}`}>
-                                    {name}
+                                {name}
                             </li>
-                        ))}
+                        ))
+                    }
                 </ul>
             </div>
         </div>

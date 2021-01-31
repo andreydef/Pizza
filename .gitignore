@@ -1,2 +1,5 @@
 # Local Netlify folder
 .netlify
+
+# Optional eslint cache
+./pizza-app/.eslintcache
