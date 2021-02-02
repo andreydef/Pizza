@@ -3,3 +3,6 @@
 
 # Optional eslint cache
 ./pizza-app/.eslintcache
+
+# Ignore Visual Code folder .idea
+.idea
