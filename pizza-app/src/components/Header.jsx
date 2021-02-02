@@ -9,10 +9,10 @@ function Header() {
         <Link to="/">
           <div className="header__logo">
             <img width="38" src={logoSvg} alt="Pizza logo" />
-              <div>
-                <h1>React Pizza</h1>
-                <p>найсмачніша піцца тільки у нас</p>
-              </div>
+            <div>
+              <h1>Tasty Pizza</h1>
+              <p>найсмачніша піцца тільки у нас</p>
+            </div>
           </div>
         </Link>
         <div className="header__cart">

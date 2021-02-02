@@ -29,27 +29,27 @@ function PizzaBlock({ name, imageUrl, price, types, sizes }) {
             <h4 className="pizza-block__title">{name}</h4>
             <div className="pizza-block__selector">
                 <ul>
-                    { availableTypes.map((type, index) => (
-                        <li 
-                           key={type}
-                           onClick={() => onSelectType(index)} 
-                           className={classNames({
-                               active: activeType === index,
-                               disabled: !types.includes(index),
-                           })}>{type}
-                         </li>
+                    {availableTypes.map((type, index) => (
+                        <li
+                            key={type}
+                            onClick={() => onSelectType(index)}
+                            className={classNames({
+                                active: activeType === index,
+                                disabled: !types.includes(index),
+                            })}>{type}
+                        </li>
                     ))}
                 </ul>
                 <ul>
-                    { availableSizes.map((size, index) => (
-                        <li 
-                           key={size}
-                           onClick={() => onSelectSize(index)} 
-                           className={classNames({
-                               active: activeSize === index,
-                               disabled: !sizes.includes(size),
-                           })}>{size} см.
-                         </li>
+                    {availableSizes.map((size, index) => (
+                        <li
+                            key={size}
+                            onClick={() => onSelectSize(index)}
+                            className={classNames({
+                                active: activeSize === index,
+                                disabled: !sizes.includes(size),
+                            })}>{size} см.
+                        </li>
                     ))}
                 </ul>
             </div>
@@ -82,11 +82,11 @@ function PizzaBlock({ name, imageUrl, price, types, sizes }) {
 
 // assign prop types check
 PizzaBlock.propTypes = {
-  name: PropTypes.string,
-  imageUrl: PropTypes.string,
-  price: PropTypes.number,
-  types: PropTypes.arrayOf(PropTypes.number),
-  sizes: PropTypes.arrayOf(PropTypes.number),
+    name: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    types: PropTypes.arrayOf(PropTypes.number),
+    sizes: PropTypes.arrayOf(PropTypes.number),
 };
 
 // assign a default values of props
