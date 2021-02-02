@@ -53,7 +53,7 @@ function SortPopup({ items }) {
                             fill="#2C2C2C"
                         />
                     </svg>
-                    <b>Сортировка по:</b>
+                    <b>Сортування по:</b>
                     <span onClick={toggleVisiblePopup}>{activeLabel}</span>
                 </div>
                 {visiblePopup && <div className="sort__popup">

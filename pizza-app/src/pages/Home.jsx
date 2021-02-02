@@ -10,29 +10,28 @@ function Home({ items }) {
           <Categories
             onClick={(name) => console.log(name)}
             items={[
-              'Мясные',
-              'Вегетарианская',
+              'Мясні',
+              'Вегетеріанські',
               'Гриль',
-              'Острые',
-              'Закрытые'
+              'Гострі',
+              'Закриті'
             ]}
           />
           <SortPopup items={[
-            'популярности',
-            'цене',
-            'алфавиту'
+            'популярності',
+            'цені',
+            'алфавіту'
           ]}
           />
         </div>
-        <h2 className="content__title">Все пиццы</h2>
+        <h2 className="content__title">Всі піцци</h2>
         <div className="content__items">
           {
             items.map((obj) => <PizzaBlock
               key={obj.id}
-              name={obj.name}
+              {...obj}
             />)
           }
-          <PizzaBlock />
         </div>
       </div>
     </div>
