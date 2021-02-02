@@ -1,8 +1,5 @@
 # Local Netlify folder
-.netlify
-
-# Optional eslint cache
-./pizza-app/.eslintcache
+/.netlify
 
 # Ignore Visual Code folder .idea
-.idea
+/.idea
