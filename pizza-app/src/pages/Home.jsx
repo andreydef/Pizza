@@ -18,9 +18,9 @@ function Home({ items }) {
             ]}
           />
           <SortPopup items={[
-            'популярності',
-            'цені',
-            'алфавіту'
+            { name: 'популярності', type: 'popular' },
+            { name: 'ціні', type: 'price' },
+            { name: 'алфавіту', type: 'alphabet' }
           ]}
           />
         </div>
