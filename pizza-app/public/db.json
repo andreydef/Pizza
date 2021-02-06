@@ -83,7 +83,7 @@
     {
         "id": 8,
         "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
-        "name": "Чотири сезона",
+        "name": "Чотири сезони",
         "types": [0, 1],
         "sizes": [26, 30, 40],
         "price": 145,
