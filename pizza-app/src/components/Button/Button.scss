@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../../scss/variables';
 
 .button {
   display: inline-block;
@@ -96,13 +96,15 @@
   }
 
   &--add {
+    height: 44px;
     svg {
-      margin-right: 2px;
+      margin-right: 5px;
     }
 
     span {
       font-weight: 600;
       font-size: 16px;
+      margin-right: 3px;
     }
 
     &:hover {
