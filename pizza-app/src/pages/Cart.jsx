@@ -35,7 +35,10 @@ function Cart() {
   };
 
   const onClickOrder = () => {
-    console.log('ВАШЕ ЗАМОВЛЕННЯ', items);
+    console.log('НОВЕ ЗАМОВЛЕННЯ');
+    console.log('Ваше замовлення', items)
+    console.log('Кількість піцц: ' + totalCount + ' шт.');
+    console.log('Сума замовлення: ' + totalPrice + ' ₴');
   };
 
   return (
@@ -110,7 +113,6 @@ function Cart() {
                   strokeLinejoin="round"
                 />
               </svg>
-
               <span onClick={onClearCart}>Очистити корзину</span>
             </div>
           </div>
@@ -119,6 +121,7 @@ function Cart() {
               <CartItem
                 key={obj.id}
                 id={obj.id}
+                imageUrl={obj.imageUrl}
                 name={obj.name}
                 type={obj.type}
                 size={obj.size}
