@@ -4,6 +4,8 @@ import classNames from 'classnames';
 import { map } from 'lodash';
 import { Link } from 'react-router-dom';
 
+import { Button } from '../../components';
+
 import { cartActions } from '../../redux/actions';
 
 import { CartItem } from '../../components';
@@ -30,6 +32,13 @@ const Cart = () => {
     },
     [dispatch],
   );
+
+  const onClickOrder = () => {
+    console.log('Нове замовлення!');
+    console.log('Ваше замовлення', items);
+    console.log('Кількість піцц:', itemsCount);
+    console.log('Сума замовлення:', totalPrice + '₴');
+  };
 
   return (
     <div className="container container--cart">
@@ -145,12 +154,12 @@ const Cart = () => {
                     />
                   </svg>
                   <Link to="/">
-                     <span>Повернутись назад</span>
+                    <span>Повернутись назад</span>
                   </Link>
                 </a>
-                <div className="button pay-btn">
-                  <span>Оплатити зараз</span>
-                </div>
+                <Button onClick={onClickOrder} className="pay-btn">
+                  <span>Купити</span>
+                </Button>
               </div>
             </div>
           </React.Fragment>

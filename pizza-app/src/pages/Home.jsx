@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { PizzaBlock, Categories, SortPopup } from '../components';
+import { PizzaBlock, Categories } from '../components';
 import { pizzasActions, cartActions, filtersActions } from '../redux/actions';
 
 function App() {
@@ -15,9 +15,7 @@ function App() {
   ]);
 
   const addToCart = React.useCallback(obj => dispatch(cartActions.addToCart(obj)), [dispatch]);
-  const selectSort = React.useCallback(obj => dispatch(filtersActions.setSortBy(obj.value)), [
-    dispatch,
-  ]);
+
   const selectCategory = React.useCallback(
     index => {
       dispatch(filtersActions.setCategory(index));
@@ -41,21 +39,19 @@ function App() {
           items={['Всі', 'Мясні', 'Вегетеріанські', 'Гриль', 'Гострі', 'Закриті']}
           onClick={selectCategory}
         />
-        <SortPopup sortBy={filters.sortBy} onSelect={selectSort} />
       </div>
       <h2 className="content__title">Всі піцци</h2>
-      {console.log(isLoading)}
       <div className="content__items">
         {pizzas && !isLoading
           ? pizzas.map(item => (
-              <PizzaBlock
-                key={item.id}
-                {...item}
-                onAdd={addToCart}
-                cartItems={cartItems}
-                isLoading={isLoading}
-              />
-            ))
+            <PizzaBlock
+              key={item.id}
+              {...item}
+              onAdd={addToCart}
+              cartItems={cartItems}
+              isLoading={isLoading}
+            />
+          ))
           : [...Array(8)].map((_, index) => <PizzaBlock key={index} isLoading={isLoading} />)}
       </div>
     </React.Fragment>
