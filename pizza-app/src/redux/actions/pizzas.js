@@ -7,8 +7,6 @@ export const Types = {
   ERROR: 'PIZZAS@LOADING:ERROR',
 };
 
-let timer = null;
-
 const Actions = {
   setItems: payload => ({
     type: Types.SET_ITEMS,
